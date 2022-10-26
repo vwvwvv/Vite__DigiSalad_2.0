@@ -14,6 +14,7 @@ import CardIngradients from './CardIngradients.vue'
           <span>OUR SERVICES</span><span class="btn-line"></span>
         </a>
       </div>
+
       <div class="card-wrap">
         <CardIngradients></CardIngradients>
         <a href="#" class="more-btn">VIEW MORE DIGISALAD’S INGRADIENTS</a>
@@ -54,6 +55,7 @@ import CardIngradients from './CardIngradients.vue'
   padding-bottom: 433px;
 }
 
+
 #section-03::before {
   content: '';
   position: absolute;
@@ -85,10 +87,15 @@ import CardIngradients from './CardIngradients.vue'
 }
 
 .info p {
-  max-width: 960px;
+  /* max-width: 960px; */
   color:#FFFFFF;
 }
 
+
+
+/* --------------------------------*\
+ card 
+\* --------------------------------*/
 .card-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -123,6 +130,14 @@ import CardIngradients from './CardIngradients.vue'
 .more-btn:hover::after {
   background-color:#d6993e;
 }
+
+
+
+
+
+/* --------------------------------*\
+ about 
+\* --------------------------------*/
 .about {
   background-color: #ffff;
   border-radius: 0 50px 50px 50px;
@@ -158,8 +173,6 @@ import CardIngradients from './CardIngradients.vue'
   align-items: center;
   margin-right: 50px;
 }
-
-
 
 .about .avatar {
   width: 204px;

@@ -4,10 +4,12 @@
 <template>
   <div id="section-01">
     <div class="container">
+
       <div class="digital-agency">
         <div class="line"></div>
         <h6>DIGITAL AGENCY</h6>
       </div>
+
       <div class="content">
         <h1 class="logo">
           <img src="../assets/logoW.png" alt="logo">
@@ -15,14 +17,18 @@
         <h2>WE CREATE<br/>AMAZING<br/><span class="f">DIGITAL EXPERIENCES</span></h2>
       </div>
 
-    </div>
-    <div class="taste">
-      <div class="pic">
-        <img src="../assets/te.png" alt="taste">
+      <div class="taste">
+        <div class="pic">
+          <a href="#anchor">
+            <img src="../assets/te.png" alt="taste">
+          </a>
+        </div>
+        <h6>TASTE US NOW!</h6>
+        <div class="indicator-line"></div>
       </div>
-      <h6>TASTE US NOW!</h6>
-      <div class="indicator-line"></div>
+
     </div>
+
 
 
   </div>
@@ -46,7 +52,7 @@
 .container {
   /* width: 100%; */
   width: 1440px;
-  position: relative;
+  /* position: relative; */
   /* display: flex; */
 }
 .digital-agency  {
@@ -77,23 +83,27 @@
   color: #fff;
 }
 
-
 #section-01 .content {
   position: absolute;
+
   /* top: 181px;
   left: 220px; */
-  margin-top: 15%;
+  /* margin-top: 15%; */
+  /* width: 100%; */
+
+  /* width: 10%; */
   left: 15%;
+  top: 20vh;
   text-shadow: 0 0 20px rgba(0,0,0,0.5);
   z-index: 1;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   #section-01 .content {
     margin-top: 10%;
     left: 15%;
   }
-}
+} */
 
 #section-01 .logo {
   width: 200px;
@@ -131,6 +141,7 @@
   border-radius: 50%;
   z-index: -1;
 }
+
 .taste {
   position: absolute;
   bottom: 0;
@@ -141,9 +152,11 @@
   align-items: center;
   z-index: 1;
   cursor: pointer;
-
+  margin-top: 20%;
 }
-
+.taste a {
+  text-decoration: none;
+}
 .taste .pic {
   width: 65px;
   height: 65px;
@@ -175,5 +188,8 @@
   height: 50px;
   background-color: #fff;
 }
+
+
+
 
 </style>

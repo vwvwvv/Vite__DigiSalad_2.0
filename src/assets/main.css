@@ -22,8 +22,8 @@ html{
 }
 
 .container {
-  /* max-width: 1280px; */
-  width: 1280px;
+  max-width: 1280px;
+  /* width: 1280px; */
   /* padding-left: 60px;
   padding-right: 60px; */
   margin: auto;

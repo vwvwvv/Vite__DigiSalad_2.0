@@ -280,8 +280,8 @@ onMounted(() => {
   overflow: hidden;
   z-index: 1;
   /* background: linear-gradient(180deg, #585880 3.61%, #26C6D0 95.7%); */
-  /* background: linear-gradient(180deg, rgba(88, 88, 128, 0.5) 3.61%, rgba(38, 198, 208, 0.5) 95.7%); */
-  background: linear-gradient(180deg, rgba(88, 88, 128, 0.5) 3.61%, rgba(38, 198, 208, 0.5) 95.7%), url(@/assets/BG.jpg);
+  background: linear-gradient(180deg, rgba(88, 88, 128, 0.6) 3.61%, rgba(38, 198, 208, 0.9) 95.7%);
+  /* background: linear-gradient(180deg, rgba(88, 88, 128, 0.5) 3.61%, rgba(38, 198, 208, 0.5) 95.7%), url(@/assets/BG.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

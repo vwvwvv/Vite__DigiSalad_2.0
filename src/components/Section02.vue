@@ -3,8 +3,8 @@
 
 <template>
   <div id="section-02">
-    <div class="container">
-      <h2 class="title">ABOUT DIGISALAD</h2>
+    <div class="container" id="anchor">
+      <h2 class="title" >ABOUT DIGISALAD</h2>
       <div class="video-container">
         <div class="video">
           <iframe frameborder="0" src="https://www.youtube.com/embed/IeIRJ9jZ5Ro" allowFullScreen="true"></iframe>
@@ -15,7 +15,7 @@
 
     </div>
 
-    <!-- <div class="awards">
+    <div class="awards">
       <div class="container">
         <div class="text">
           <h2 class="title">AWARDS</h2>
@@ -40,7 +40,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="taste">
       <!-- <div class="pic">
