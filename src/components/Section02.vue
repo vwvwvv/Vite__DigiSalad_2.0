@@ -1,0 +1,180 @@
+<script setup>
+</script>
+
+<template>
+  <div id="section-02">
+    <div class="container">
+      <h2 class="title">ABOUT DIGISALAD</h2>
+      <div class="video-container">
+        <div class="video">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/IeIRJ9jZ5Ro" allowFullScreen="true"></iframe>
+        </div>
+      </div>
+      <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+      <a href="#" class="btn"><span>VIEW MORE</span><span class="btn-line"></span></a>
+
+    </div>
+
+    <!-- <div class="awards">
+      <div class="container">
+        <div class="text">
+          <h2 class="title">AWARDS</h2>
+          <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc.</p>
+        </div>
+        <div class="pic">
+          <div class="row">
+            <div class="col">
+              <img src="../assets/image5.png">
+            </div>
+            <div class="col">
+              <img src="../assets/image5.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img src="../assets/image5.png">
+            </div>
+            <div class="col">
+              <img src="../assets/image5.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="taste">
+      <!-- <div class="pic">
+        <img src="../assets/te.png" alt="taste">
+      </div>
+      <h6>TASTE US NOW!</h6> -->
+      <div class="indicator-line"></div>
+    </div>
+  </div>
+
+</template>
+
+<style scoped>
+
+#section-02 {
+  width: 100%;
+  /* height: 100vh; */
+  background-color:#E5E5E5;
+  position: relative;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 216px;
+}
+
+p {
+  max-width: 960px;
+}
+.video-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 80px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.video {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* margin-bottom: 100px; */
+}
+
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  width: 223px;
+  height: 86px;
+}
+
+/* 
+ * awards
+ */
+.awards {
+  background-color: #ffff;
+  border-radius: 50px 0 50px 50px;
+  width: 93%;
+  /* width: 1280px; */
+  /* height: 432px; */
+  position: absolute;
+  bottom: -216px;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  /* margin-left: 80px; */
+  height: 33%;
+}
+
+.awards .container {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+  height: 100%;
+  padding-top: 216px;
+}
+
+.awards .text {
+  width: 35%;
+}
+.awards p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #262626;
+  margin-top: 50px;
+}
+
+.awards .title {
+  display: inline-block;
+  margin: 0;
+}
+
+.awards .pic {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.awards .row {
+  width: 100%;
+  margin: 3%;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+/* 
+ * taste icon
+ */
+.taste {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+
+}
+.taste .indicator-line {
+  width: 2px;
+  height: 80px;
+  background-color: #808080;
+}
+</style>
