@@ -158,6 +158,44 @@ p {
   /* justify-content: space-around; */
 }
 
+@media (max-width: 992px) {
+  /* .container {
+    padding-bottom: 1000px;
+  } */
+  /* .awards {
+    height: 60%;
+  } */
+  .awards .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 7%;
+    padding-top: 20%;
+  }
+
+  .awards .text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .awards p {
+    padding: 5%;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    word-break: break-all;
+  }
+
+  .awards .pic {
+    width: 100%;
+  }
+
+  .video-container {
+    padding: 0;
+  }
+}
+
 /* 
  * taste icon
  */

@@ -151,12 +151,12 @@ onMounted(() => {
   z-index: 9999;
   transition: 0.5s;
 }
-/* @media (min-width: 1500px) {
-  #part-navbar{
-    padding-left: 20%;
-    padding-right: 20%;
+@media (max-width: 576px) {
+  #part-navbar {
+    padding-left: 6%;
+    padding-right: 6%;
   }
-} */
+}
 
 #part-navbar.stick {
   background-color:rgba(255,255,255,1);
@@ -184,7 +184,8 @@ onMounted(() => {
   height: 40px;
   border-radius: 24px;
   border: 0;
-  background:linear-gradient(90deg, #4EE5EA 3.94%, #26D0A8 94.73%);
+  /* background-image:linear-gradient(to right, #4EE5EA 3.94%, #26D0A8 94.73%); */
+  background-image:linear-gradient(120deg, #4EE5EA 10%, #00ffc3 60%,#0015ff7d 90%, #26D0A8 100%);
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -192,13 +193,21 @@ onMounted(() => {
   letter-spacing: 1.2px;
   color: #FFFFFF;
   cursor: pointer;
-  transition: background 1s;
+  transition: 1.5s;
+  background-size: 400% auto;
+  text-shadow: 0 0 4px rgba(2, 139, 111, 0.2);
 }
-#part-navbar button:hover {
-    background:linear-gradient(45deg, #26D0A8 3.94%, #4EE5EA 94.73%);
-    box-shadow: 0 0 3px rgba(14, 86, 69, 0.6);
 
+#part-navbar button:hover {
+    /* background:linear-gradient(45deg, #26D0A8 3.94%, #4EE5EA 94.73%); */
+    background-position: right center;
+    box-shadow: 0 0 3px rgba(14, 86, 69, 0.6);
+    text-decoration: none;
 }
+
+
+
+
 /* ------------------------ */
 /* 漢堡選單 */
 /* ------------------------ */
@@ -224,6 +233,21 @@ onMounted(() => {
   transition: 0.2s;
 }
 
+
+@media (max-width: 768px) {
+
+  #part-navbar button {
+    width: 130px;
+    height: 45px;
+  }
+  .hamburger {
+    margin-left: 20px;
+  }
+}
+
+
+
+
 #part-navbar.stick .hamburger-line,
 #part-navbar.stick .hamburger::before,
 #part-navbar.stick .hamburger::after {
@@ -247,11 +271,12 @@ onMounted(() => {
   width: 80%;
 }
 
+
+
 /* ------------------------ */
 /* 漢堡選單.open */
 /* ------------------------ */
 .open .hamburger-line { display: none;}
-
 .open.hamburger::before,
 .open.hamburger::after {
   top: 50%;
@@ -259,7 +284,6 @@ onMounted(() => {
   background-color:rgba(255,255,255,1);
 }
 .open.hamburger::before {
-
   transform: rotate(45deg);
 }
 .open.hamburger::after {
@@ -289,7 +313,7 @@ onMounted(() => {
   transition: opacity 0.5s;
 }
 .overlays.open {
-  height: 100vh;
+  height: 300vh;
   overflow-y: hidden;
   opacity: 1;
 }
@@ -308,11 +332,11 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   width: 80%;
+  height: 100vh;
   /* height: 0; */
   /* position: absolute;
   left: 0;
   right: 0; */
-  height: 100%;
 
 }
 

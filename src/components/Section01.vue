@@ -10,11 +10,16 @@
         <h6>DIGITAL AGENCY</h6>
       </div>
 
-      <div class="content">
+      <div class="hero-content">
         <h1 class="logo">
           <img src="../assets/logoW.png" alt="logo">
         </h1>
-        <h2>WE CREATE<br/>AMAZING<br/><span class="f">DIGITAL EXPERIENCES</span></h2>
+        <h2 class="slogan">
+          WE CREATE<br/>
+          AMAZING<br/>
+          <span class="last-line">DIGITAL <br class="md-block"/>
+          EXPERIENCES</span>
+        </h2>
       </div>
 
       <div class="taste">
@@ -29,15 +34,11 @@
 
     </div>
 
-
-
   </div>
 </template>
 
 <style scoped>
-* {
-  transition: 0.3s;
-}
+* { transition: 0.3s; }
 
 #section-01 {
   width: 100%;
@@ -83,7 +84,7 @@
   color: #fff;
 }
 
-#section-01 .content {
+.hero-content {
   position: absolute;
 
   /* top: 181px;
@@ -98,27 +99,28 @@
   z-index: 1;
 }
 
-/* @media (max-width: 1200px) {
-  #section-01 .content {
-    margin-top: 10%;
-    left: 15%;
-  }
-} */
-
-#section-01 .logo {
+.hero-content .logo {
   width: 200px;
   margin-bottom: 5%;
 }
 
-#section-01 h2 {
+.hero-content .slogan {
   font-weight: 700;
   font-size: 38px;
   color: #fff;
   line-height: 70px;
   letter-spacing: 10px;
 }
+.hero-content .md-block {
+  display: none;
+}
 
-.content:before {
+
+
+/**
+ * taste [scroll down]
+ */
+.last-line:before {
   content: '';
   position: absolute;
   bottom: 17px;
@@ -126,11 +128,11 @@
   right: 5px;
   background-color:#26C6D0;
   display: inline-block;
-  height: 10px;
+  height: 15px;
   z-index: -1;
 }
 
-.content::after {
+.last-line::after {
   content: '';
   position: absolute;
   bottom: 20px;
@@ -142,6 +144,17 @@
   z-index: -1;
 }
 
+
+
+
+
+
+
+
+
+/**
+ * taste [scroll down]
+ */
 .taste {
   position: absolute;
   bottom: 0;
@@ -152,7 +165,7 @@
   align-items: center;
   z-index: 1;
   cursor: pointer;
-  margin-top: 20%;
+  /* margin-top: 20%; */
 }
 .taste a {
   text-decoration: none;
@@ -189,7 +202,110 @@
   background-color: #fff;
 }
 
+@media (max-width: 769px) {
+  .hero-content .md-block {
+    display: block;
+  }
 
+}
+
+@media (max-width: 576px) {
+  .hamburger {
+    margin-left: 20px;
+  }
+  .digital-agency {
+    /* display: none; */
+    transform: rotate(0deg);
+    transform-origin: left top;
+    bottom: 5vh;
+    left: 5%;
+    width: 80%;
+  }
+  .hero-content {
+    left: 6%;
+    top: 25vh;
+  }
+  .hero-content .logo {
+    width: 200px;
+    margin-bottom: 10%;
+  }
+  .hero-content .slogan {
+    font-weight: 700;
+    font-size: 38px;
+    color: #fff;
+    line-height: 60px;
+    letter-spacing: 8px;
+  }
+
+  .last-line:before {
+    bottom: 10px;
+    left: -5px;
+    right: 5px;
+    height: 12px;
+    background:#26C6D0;
+    /* background:linear-gradient(180deg, transparent 20%, #26C6D0 100%); */
+  }
+
+  .last-line::after {
+    bottom: 20px;
+    right: -15px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .taste {
+    bottom: -3%;
+  }
+
+}
+
+@media (max-width: 377px) {
+
+  .hero-content {
+    top: 22vh;
+  }
+
+   .hero-content .slogan {
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 8px;
+  }
+
+}
+
+@media (max-width: 340px) {
+
+  .hero-content {
+    top: 23vh;
+  }
+  .hero-content .slogan {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+    .last-line:before {
+    bottom: 3px;
+    left: -5px;
+    right: 5px;
+  }
+
+  .last-line::after {
+    bottom: 15px;
+    right: -25px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .hero-content .logo {
+    width: 130px;
+  }
+  .digital-agency {
+    bottom: 18vh;
+    left: 5%;
+    width: 90%;
+  }
+
+}
 
 
 </style>
