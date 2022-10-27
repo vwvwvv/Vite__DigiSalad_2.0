@@ -59,7 +59,7 @@ const BrandLogos = reactive([
     <div class="brand-logo" v-for="BrandLogo in BrandLogos" :key='BrandLogo'>
       <div class="pic">
         <a href="#">
-          <img :src="BrandLogo.img" alt="">
+          <img :src="BrandLogo.img" alt="brand">
         </a>
       </div>
     </div>
