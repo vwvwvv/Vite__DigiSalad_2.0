@@ -68,6 +68,8 @@
   align-items: center;
   margin: auto;
   padding-bottom: 216px;
+  /* padding-bottom: 15%; */
+
 }
 
 p {
@@ -111,6 +113,7 @@ p {
   /* height: 432px; */
   position: absolute;
   bottom: -216px;
+  /* bottom: -15%; */
   right: 0;
   z-index: 1;
   display: flex;
@@ -122,9 +125,10 @@ p {
 .awards .container {
   flex-direction: row;
   justify-content: space-between;
-  width: 1280px;
+  /* width: 1280px; */
   height: 100%;
   padding-top: 216px;
+  /* padding-top: 15%; */
 }
 
 .awards .text {
@@ -158,18 +162,33 @@ p {
   /* justify-content: space-around; */
 }
 
+
 @media (max-width: 992px) {
-  /* .container {
-    padding-bottom: 1000px;
-  } */
-  /* .awards {
-    height: 60%;
-  } */
+  .container {
+    /* padding-bottom: 60%; */
+    padding-bottom: 350px;
+  }
+  .awards {
+    bottom: -350px;
+    /* bottom: -60%; */
+    /* bottom: -50%; */
+    /* height: 60%; */
+    /* padding-bottom: 31%; */
+    height: 700px;
+    /* height: 30%; */
+  }
   .awards .container {
     flex-direction: column;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    justify-content: center;
+    align-items: center;
     margin-right: 7%;
-    padding-top: 20%;
+    height: 100%;
+    padding-top: 350px;
+    /* padding-left: 0;
+    padding-right: 0; */
+    /* padding-top: 60%; */
+    /* padding-top: 20%; */
   }
 
   .awards .text {
@@ -185,10 +204,16 @@ p {
     text-align:justify;
     text-justify:inter-ideograph;
     word-break: break-all;
+    /* margin-top: 30px; */
   }
 
   .awards .pic {
     width: 100%;
+  }
+
+  .awards .row {
+    justify-content: space-around;
+    margin-left: 0;
   }
 
   .video-container {

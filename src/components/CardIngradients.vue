@@ -43,14 +43,16 @@ const cards = reactive([
 
 <template>
   <div id="card-ingradient" v-for="card in cards" :key='card'>
-    <div class="pic">
-      <img :src="card.img" alt="">
+    <div class="wrap">
+      <div class="pic">
+        <img :src="card.img" alt="">
+      </div>
+      <div class="text">
+        <h4>{{ card.item }}</h4>
+        <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
+      </div>
     </div>
-    <div class="text">
-      <h4>{{ card.item }}</h4>
-      <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare.</p>
-      <a href="#">VIEW MORE</a>
-    </div>
+    <a href="#">VIEW MORE</a>
   </div>
 </template>
 
@@ -58,7 +60,7 @@ const cards = reactive([
 #card-ingradient {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   width: 25%;
   margin-bottom: 65px;
@@ -66,6 +68,11 @@ const cards = reactive([
   margin-right: 20px;
 }
 
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .pic {
   border-radius: 50%;
@@ -109,9 +116,10 @@ h4 {
 p {
   color: #fff;
   width: auto;
+  /* padding: 20px 0; */
 }
 
-.text a {
+a {
   display: block;
   text-decoration: none;
   padding: 18px 35px;
@@ -128,8 +136,26 @@ p {
   transition: 0.5s;
 }
 
-.text a:hover {
+a:hover {
   box-shadow: inset 0 0 6px 2px rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 992px) {
+  a {
+    padding: 18px 23px;
+  }
+}
+
+@media (max-width: 768px) {
+  #card-ingradient {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  #card-ingradient {
+    width: 100%;
+    margin-bottom: 30%;
+  }
+}
 </style>

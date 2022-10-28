@@ -201,7 +201,7 @@ onMounted(() => {
 #part-navbar button:hover {
     /* background:linear-gradient(45deg, #26D0A8 3.94%, #4EE5EA 94.73%); */
     background-position: right center;
-    box-shadow: 0 0 3px rgba(14, 86, 69, 0.6);
+    box-shadow: 0 0 5px rgba(8, 58, 46, 0.5);
     text-decoration: none;
 }
 
