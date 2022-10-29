@@ -6,7 +6,9 @@ import CardIngradients from './CardIngradients.vue'
   <div id="section-03">
     <div class="container">
       <div class="info">
-        <h2 class="title">OUR INGRADIENTS</h2>
+        <h2 class="title">
+          OUR INGRADIENTS
+        </h2>
         <p>
           Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.
         </p>
@@ -241,11 +243,74 @@ import CardIngradients from './CardIngradients.vue'
   .info {
     padding-top: 350px;
   }
+  #section-03 {
+    padding-bottom: calc(100px + 500px);
+  }
+  .about {
+    bottom: -500px;
+    height: 1000px;
+    width: 94%;
+  }
+  .about .container {
+    flex-direction: column;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .about .character {
+    margin-right: 0;
+  }
+  .about p {
+    text-align:justify;
+    text-justify:inter-ideograph;
+    word-break: break-all;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }
 
 @media (max-width: 576px) {
   .md-none {
     display: block;
+  }
+   /* .about {
+    bottom: -500px;
+    height: 1200px;
+  } */
+
+  .about .icon  {
+    width: 70px;
+    height: 70px;
+    /* margin-top: 5px; */
+  }
+  .about p {
+    font-size: 22px;
+    line-height: 40px;
+
+  }
+}
+@media (max-width: 377px) {
+.about .icon  {
+    width: 55px;
+    height: 55px;
+    /* margin-top: 5px; */
+    margin: 10px;
+  }
+  .about p {
+    font-size: 20px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 340px) {
+  .about .icon  {
+    width: 45px;
+    height: 45px;
+  }
+  .about p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 34px;
   }
 }
 </style>

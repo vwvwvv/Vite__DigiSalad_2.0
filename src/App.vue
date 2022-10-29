@@ -16,8 +16,8 @@ import PartFooter from '@/components/PartFooter.vue'
   <Section01></Section01>
   <Section02></Section02>
   <Section03></Section03>
-  <!-- <Section04></Section04> -->
-  <!-- <Section05></Section05> -->
+  <Section04></Section04>
+  <Section05></Section05>
   <PartFooter></PartFooter>
 </template>
 

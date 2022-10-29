@@ -202,7 +202,7 @@
   background-color: #fff;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .hero-content .md-block {
     display: block;
   }

@@ -5,18 +5,21 @@
    <div id="section-05">
       <div class="container">
          <button type="button" class="arrow left"></button>
-         <div class="view">
-            <div class="pic">
-               <img src="../assets/LP_fb_01.jpg" alt="LP">
+         <div class="wrap">
+            <div class="view">
+               <div class="pic">
+                  <img src="../assets/LP_fb_01.jpg" alt="LP">
+               </div>
+               <a href="#" class="btn"><span>VIEW PROJECT</span><span class="btn-line"></span></a>
             </div>
-            <a href="#" class="btn"><span>VIEW PROJECT</span><span class="btn-line"></span></a>
+
+            <div class="text">
+               <h5>HIGHLIGHTED SHOWCASE</h5>
+               <h1 class="title">LP CLUB MOBILE APP</h1>
+               <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+            </div>
          </div>
 
-         <div class="text">
-            <h5>HIGHLIGHTED SHOWCASE</h5>
-            <h1 class="title">LP CLUB MOBILE APP</h1>
-            <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
-         </div>
          <button type="button" class="arrow right"></button>
          
          <div class="page">
@@ -31,7 +34,7 @@
 <style scoped>
 #section-05 {
    width: 100%;
-   height: 100%;
+   height: 100vh;
    background-image: url(../assets/BG_LP_fb.jpg);
    background-position: center;
    background-repeat: no-repeat;
@@ -77,6 +80,12 @@
 
 .right {
    transform: rotate(-180deg);
+}
+
+.wrap {
+   display: flex;
+   width: 95%;
+   justify-content: center;
 }
 .view { 
    position: relative;
@@ -171,4 +180,30 @@
    bottom: 0;
    right: 0;
 }
+
+@media(max-width: 1200px) {
+   .wrap {
+      flex-direction: column;
+      align-items: center;
+   }
+   .view {
+      width: 90%;
+      height: 500px;
+      /* display: flex;
+      justify-content: center; */
+   }
+   .view .pic {
+      max-width: 85%;
+      height: 80%;
+   }
+   .view .btn {
+      bottom: 50%;
+      right: 30%;
+      transform: translate(0, 50%);
+   }
+   .text {
+      width: 100%;
+   }
+}
+
 </style>
