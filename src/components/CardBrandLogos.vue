@@ -77,7 +77,7 @@ const BrandLogos = reactive([
 }
 .brand-logo {
     width: 14%;
-    padding: 25px;
+    padding: 3%;
 }
 
 @media (max-width: 992px) {
