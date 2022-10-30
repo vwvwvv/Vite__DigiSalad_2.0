@@ -48,6 +48,9 @@ html{
   position: relative; 
   z-index: 1;
 }
+@media (max-width: 340px)  {
+  .title { font-size: 24px; }
+}
 
 .title::after {
   content: '';

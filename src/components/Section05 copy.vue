@@ -5,7 +5,6 @@
    <div id="section-05">
       <div class="container">
          <button type="button" class="arrow left"></button>
-
          <div class="wrap">
             <div class="view">
                <div class="pic">
@@ -200,7 +199,9 @@
    .view {
       width: 100%;
       height: 300px;
-      padding: 0
+      padding: 0;
+      /* display: flex;
+      justify-content: center; */
    }
    .view .pic {
       max-width: 100%;
@@ -226,48 +227,59 @@
    }
    #section-05 .container {
       padding-top: 20%;
+      padding-bottom: 30%;
       align-items: flex-start;
+      /* margin-bottom: 100vh; */
       width: 90%;
       padding-left: 0;
       padding-right: 0;
+      /* height: 100%; */
+      min-height: 900px;
    }
    .wrap {
-      width: 100%;
+      width: 68%;
    }
    .view {
-      padding: 5%;
-      height: 100%;
-      margin-bottom: 20%;
+      padding: 3%;
    }
-
+   .view .pic {
+      width: 100%;
+      /* height: 80%; */
+   }
    .view .btn {
-      bottom: 5%;
-      right: 0;
+      bottom: 18%;
+      right: -20%;
+      /* left: 3%; */
+      transform: translate(0, 50%);
+      padding: 10px;
    }
    .text {
       width: 100%;
+      position: absolute;
+      /* top: 60%; */
+      /* bottom: -20%; */
+      bottom: 0
    }
 
    .text .title {
-      font-size: 28px;
+      font-size: 30px;
       letter-spacing: 1px;
    }
-
+   /* .text p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+   } */
    .page {
      width: 44px;
      height: 44px;
    }
 
    .arrow {
-      background-color: rgba(38,198,208,0.8);
-      margin-top: 40%;
+      margin-top: 25%;
       width: 44px;
       height: 44px;
-      position: absolute;
-      z-index: 5;
-   }
-   .arrow.right {
-      right: 0;
    }
 }
 
@@ -275,7 +287,13 @@
    .wrap {
       width: 100%;
    }
-
+   .arrow {
+      position: absolute;
+      z-index: 5;
+   }
+   .arrow.right {
+      right: 0;
+   }
    .text .title {
       font-size: 24px;
       letter-spacing: 1px;
