@@ -2,9 +2,10 @@
 </script>
 
 <template>
-   <div id="section-05">
+   <section id="section-works">
       <div class="container">
          <button type="button" class="arrow left"></button>
+
          <div class="wrap">
             <div class="view">
                <div class="pic">
@@ -13,10 +14,10 @@
                <a href="#" class="btn"><span>VIEW PROJECT</span><span class="btn-line"></span></a>
             </div>
 
-            <div class="text">
+            <div class="text fadeInUp wow" data-wow-duration="2s">
                <h5>HIGHLIGHTED SHOWCASE</h5>
                <h1 class="title">LP CLUB MOBILE APP</h1>
-               <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+               <p class="fadeInUp wow" data-wow-duration="3s" data-wow-delay="0.2s" >Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
             </div>
          </div>
 
@@ -28,11 +29,11 @@
             <div class="number down">04</div>
          </div>
       </div>
-   </div>
+   </section>
 </template>
 
 <style scoped>
-#section-05 {
+#section-works {
    width: 100%;
    /* height: 100%; */
    background-image: url(../assets/BG_LP_fb.jpg);
@@ -47,7 +48,7 @@
    padding-top: 10%;
    padding-bottom: 10%;
 }
-#section-05 .container {
+#section-works .container {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -64,7 +65,10 @@
    border: 0;
    outline: 0;
    position: relative;
+   box-shadow: 2px 2px 3px rgba(5, 96, 103, 0.8);
    cursor: pointer;
+   transform: scale(1);
+   transition: 0.3s;
 }
 .arrow::before {
    content: '';
@@ -78,10 +82,20 @@
    transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.arrow.right {
-   transform: rotate(-180deg);
+.arrow.right::before {
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(225deg);
 }
-
+.arrow:hover {
+   /* filter: brightness(1.1); */
+   background-color: #35d6e2;
+   /* transform: scale(1.05); */
+   box-shadow: 3px 3px 5px rgba(5, 96, 103, 0.8);
+}
+.arrow:active {
+   transform: translateY(-0.5px) scale(.98);
+}
 .wrap {
    display: flex;
    width: 90%;
@@ -199,9 +213,7 @@
    .view {
       width: 100%;
       height: 300px;
-      padding: 0;
-      /* display: flex;
-      justify-content: center; */
+      padding: 0
    }
    .view .pic {
       max-width: 100%;
@@ -219,67 +231,56 @@
 }
 
 @media(max-width: 576px) {
-   #section-05 {
+   #section-works {
       /* height: 100vh; */
       /* max-height: 1000px; */
       /* min-height: 100vh; */
       padding-top: 15%;
    }
-   #section-05 .container {
+   #section-works .container {
       padding-top: 20%;
-      padding-bottom: 30%;
       align-items: flex-start;
-      /* margin-bottom: 100vh; */
       width: 90%;
       padding-left: 0;
       padding-right: 0;
-      /* height: 100%; */
-      min-height: 900px;
    }
    .wrap {
-      width: 68%;
+      width: 100%;
    }
    .view {
-      padding: 3%;
+      padding: 5%;
+      height: 100%;
+      margin-bottom: 20%;
    }
-   .view .pic {
-      width: 100%;
-      /* height: 80%; */
-   }
+
    .view .btn {
-      bottom: 18%;
-      right: -20%;
-      /* left: 3%; */
-      transform: translate(0, 50%);
-      padding: 10px;
+      bottom: 5%;
+      right: 0;
    }
    .text {
       width: 100%;
-      position: absolute;
-      /* top: 60%; */
-      /* bottom: -20%; */
-      bottom: 0
    }
 
    .text .title {
-      font-size: 30px;
+      font-size: 28px;
       letter-spacing: 1px;
    }
-   /* .text p {
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
-      overflow: hidden;
-   } */
+
    .page {
      width: 44px;
      height: 44px;
    }
 
    .arrow {
-      margin-top: 25%;
+      background-color: rgba(38,198,208,0.8);
+      margin-top: 40%;
       width: 44px;
       height: 44px;
+      position: absolute;
+      z-index: 5;
+   }
+   .arrow.right {
+      right: 0;
    }
 }
 
@@ -287,17 +288,13 @@
    .wrap {
       width: 100%;
    }
-   .arrow {
-      position: absolute;
-      z-index: 5;
-   }
-   .arrow.right {
-      right: 0;
-   }
+
    .text .title {
       font-size: 24px;
       letter-spacing: 1px;
    }
 }
+
+
 
 </style>

@@ -44,7 +44,7 @@ const cards = reactive([
 <template>
   <div id="card-ingradient" v-for="card in cards" :key='card'>
     <div class="wrap">
-      <div class="pic">
+      <div class="pic bounceIn wow" data-wow-duration="1s" ata-wow-delay="1s">
         <img :src="card.img" alt="">
       </div>
       <div class="text">
@@ -81,6 +81,12 @@ const cards = reactive([
   padding: 20px;
   background-color:#fff;
   overflow: hidden;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.pic:hover {
+  transform: scale(1.15);
+
 }
 
 img {

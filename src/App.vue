@@ -1,24 +1,26 @@
 <script setup>
 import PartNavBar from '@/components/PartNavBar.vue'
-import Section01 from '@/components/Section01.vue'
-import Section02 from '@/components/Section02.vue'
-import Section03 from '@/components/Section03.vue'
-import Section04 from '@/components/Section04.vue'
-import Section05 from '@/components/Section05.vue'
+import SectionHome from '@/components/SectionHome.vue'
+import SectionAboutAwards from '@/components/SectionAboutAwards.vue'
+import SectionServiceFounder from '@/components/SectionServiceFounder.vue'
+import SectionBrands from '@/components/SectionBrands.vue'
+import SectionWorks from '@/components/SectionWorks.vue'
 import PartFooter from '@/components/PartFooter.vue'
-
+// import PartLoading from '@/components/PartLoading.vue'
 </script>
 
 <template>
 
-  
+  <!-- <PartLoading></PartLoading> -->
   <PartNavBar></PartNavBar>
-  <Section01></Section01>
-  <Section02></Section02>
-  <Section03></Section03>
-  <Section04></Section04>
-  <Section05></Section05>
+  <SectionHome></SectionHome>
+  <SectionAboutAwards></SectionAboutAwards>
+  <SectionServiceFounder></SectionServiceFounder>
+  <SectionBrands></SectionBrands>
+  <SectionWorks></SectionWorks>
   <PartFooter></PartFooter>
+
+  
 </template>
 
 <style scoped>

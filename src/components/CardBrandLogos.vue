@@ -55,8 +55,8 @@ const BrandLogos = reactive([
 </script>
 
 <template>
-  <div id="card-BrandLogos" >
-    <div class="brand-logo" v-for="BrandLogo in BrandLogos" :key='BrandLogo'>
+  <div id="card-BrandLogos">
+    <div class="brand-logo fadeIn wow" v-for="BrandLogo in BrandLogos" :key='BrandLogo'  data-wow-duration="2s" data-wow-delay="0.5s">
       <div class="pic">
         <a href="#">
           <img :src="BrandLogo.img" alt="brand">

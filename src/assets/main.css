@@ -7,12 +7,12 @@
   font-family: "proxima-nova",sans-serif;
 }
 
-*, *::after, *::before {
-  box-sizing: border-box;
-}
+*, *::after, *::before { box-sizing: border-box; }
 
-html{
-  scroll-behavior: smooth;
+html { 
+  scroll-behavior: smooth; 
+  /* height of sticky header */
+  scroll-padding-top: 120px;
 }
 
 #app {
@@ -38,6 +38,11 @@ html{
   }
 }
 
+/**
+ * ----------------------------------------
+ * 標題
+ * ----------------------------------------
+ */
 .title {
   font-size: 28px;
   line-height: 34px;
@@ -45,12 +50,14 @@ html{
   color: #262626;
   margin-top: 125px;
   margin-bottom: 75px;
-  position: relative; 
+  position: relative;
+  display: inline-block;
   z-index: 1;
 }
 @media (max-width: 340px)  {
   .title { font-size: 24px; }
 }
+
 
 .title::after {
   content: '';
@@ -77,6 +84,13 @@ html{
   display: inline-block;
   height: 12px;
   z-index: -1;
+  animation: moving 5s infinite;
+}
+
+@keyframes moving {
+  0% { background-position: -100% 0; }
+  50% { background-position: 40% 0; }
+  100% { background-position: 100% 0; }
 }
 
 img {
@@ -94,6 +108,13 @@ p {
   line-height: 28px;
   letter-spacing: 1px;
 }
+
+
+/**
+ * ----------------------------------------
+ * Btn
+ * ----------------------------------------
+ */
 
 .btn {
   background-color: #26C6D0;
@@ -125,3 +146,5 @@ p {
 .btn:active {
   transform: translateY(-6px) scale(.98);
 }
+
+

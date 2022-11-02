@@ -2,20 +2,29 @@
 </script>
 
 <template>
-  <div id="section-02">
-    <div class="container" id="anchor">
-      <h2 class="title" >ABOUT DIGISALAD</h2>
-      <div class="video-container">
-        <div class="video">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/IeIRJ9jZ5Ro" allowFullScreen="true"></iframe>
-        </div>
+  <section id="section-about-awards">
+    <div class="taste line">
+      <!-- <div class="pic">
+        <img src="../assets/te.png" alt="taste">
       </div>
-      <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
-      <a href="#" class="btn"><span>VIEW MORE</span><span class="btn-line"></span></a>
-
+      <h6>TASTE US NOW!</h6> -->
+      <div class="indicator-line"></div>
     </div>
 
-    <div class="awards">
+    <div id="about">
+      <div class="container fadeInUp wow" data-wow-duration="2s" data-wow-offset="2">
+        <h2 class="title">ABOUT DIGISALAD</h2>
+        <div class="video-container">
+          <div class="video">
+            <iframe frameborder="0" src="https://www.youtube.com/embed/IeIRJ9jZ5Ro" allowFullScreen="true"></iframe>
+          </div>
+        </div>
+        <p>Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.</p>
+        <a href="#" class="btn"><span>VIEW MORE</span><span class="btn-line"></span></a>
+      </div>
+    </div>
+
+    <div id="awards" class="awards fadeInRight wow" data-wow-duration="1.5s">
       <div class="container">
         <div class="text">
           <h2 class="title">AWARDS</h2>
@@ -41,21 +50,14 @@
         </div>
       </div>
     </div>
-
-    <div class="taste">
-      <!-- <div class="pic">
-        <img src="../assets/te.png" alt="taste">
-      </div>
-      <h6>TASTE US NOW!</h6> -->
-      <div class="indicator-line"></div>
-    </div>
-  </div>
+    
+  </section>
 
 </template>
 
 <style scoped>
 
-#section-02 {
+#section-about-awards {
   width: 100%;
   /* height: 100vh; */
   background-color:#E5E5E5;
@@ -133,6 +135,11 @@ p {
 
 .awards .text {
   width: 35%;
+
+}
+.awards .title {
+  /* display: inline-block; */
+  margin: 0;
 }
 .awards p {
   text-align: left;
@@ -144,10 +151,7 @@ p {
   margin-top: 50px;
 }
 
-.awards .title {
-  display: inline-block;
-  margin: 0;
-}
+
 
 .awards .pic {
   width: 60%;
@@ -240,4 +244,5 @@ p {
   height: 80px;
   background-color: #808080;
 }
+
 </style>

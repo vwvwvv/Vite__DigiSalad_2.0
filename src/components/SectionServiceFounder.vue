@@ -3,30 +3,32 @@ import CardIngradients from './CardIngradients.vue'
 </script>
 
 <template>
-  <div id="section-03">
-    <div class="container">
-      <div class="info">
-        <h2 class="title">
-          OUR INGRADIENTS
-        </h2>
-        <p>
-          Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.
-        </p>
-        <a href="#" class="btn">
-          <span>OUR SERVICES</span><span class="btn-line"></span>
-        </a>
-      </div>
-
-      <div class="card-wrap">
-        <CardIngradients></CardIngradients>
-      </div>
-      <a href="#" class="more-btn">
-          VIEW MORE <br class="md-none" />DIGISALAD’S INGRADIENTS
-        </a>
-    </div>
-
-    <div class="about">
+  <section id="section-service-founder">
+    <div class="service">
       <div class="container">
+        <div class="info">
+          <h2 class="title" id="service">
+            OUR INGREDIENTS
+          </h2>
+          <p>
+            Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Nam condimentum vitae ligula vel ornare. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur, eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie faucibus.
+          </p>
+          <a href="#" class="btn">
+            <span>OUR SERVICES</span><span class="btn-line"></span>
+          </a>
+        </div>
+
+        <div class="card-wrap">
+          <CardIngradients></CardIngradients>
+        </div>
+        <a href="#" class="more-btn">
+            VIEW MORE <br class="md-none" />DIGISALAD’S INGRADIENTS
+        </a>
+      </div>
+    </div>
+    
+    <div class="founder">
+      <div class="container fadeInLeft wow" data-wow-duration="1s">
         <div class="character">
           <div class="avatar">
             <img src="../assets/TST1914.jpg" alt="avatar">
@@ -46,12 +48,12 @@ import CardIngradients from './CardIngradients.vue'
       </div>
     </div>
 
-  </div>
+  </section>
 </template>
 
 <style scoped>
 
-#section-03 {
+#section-service-founder {
   width: 100%;
   background-color:#26C6D0;
   border-radius: 50px 50px 0 0 ;
@@ -61,7 +63,7 @@ import CardIngradients from './CardIngradients.vue'
 }
 
 
-#section-03::before {
+#section-service-founder::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -144,9 +146,9 @@ import CardIngradients from './CardIngradients.vue'
 
 
 /* --------------------------------*\
- about 
+ founder 
 \* --------------------------------*/
-.about {
+.founder {
   background-color: #ffff;
   border-radius: 0 50px 50px 50px;
   /* max-width: 1280px; */
@@ -167,7 +169,7 @@ import CardIngradients from './CardIngradients.vue'
   background-size: cover;
 }
 
-.about .container {
+.founder .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -175,14 +177,14 @@ import CardIngradients from './CardIngradients.vue'
   height: 100%;
 }
 
-.about .character {
+.founder .character {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 50px;
 }
 
-.about .avatar {
+.founder .avatar {
   width: 204px;
   height: 204px;
   border-radius: 50%;
@@ -190,7 +192,7 @@ import CardIngradients from './CardIngradients.vue'
   margin-bottom: 15%;
 }
 
-.about .name {
+.founder .name {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -201,7 +203,7 @@ import CardIngradients from './CardIngradients.vue'
   color: #FFFFFF;
 }
 
-.about .position {
+.founder .position {
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -211,19 +213,19 @@ import CardIngradients from './CardIngradients.vue'
   color: #FFFFFF;
   padding-top: 3%;
 }
-.about .text {
+.founder .text {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about .icon {
+.founder .icon {
   width: 90px;
   height: 90px;
   overflow: hidden;
   margin: 20px;
 }
 
-.about p {
+.founder p {
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
@@ -234,7 +236,7 @@ import CardIngradients from './CardIngradients.vue'
   max-width: 800px;
 }
 
-.about p span {
+.founder p span {
   color: #FFBC58;
 }
 
@@ -246,21 +248,21 @@ import CardIngradients from './CardIngradients.vue'
   #section-03 {
     padding-bottom: calc(100px + 500px);
   }
-  .about {
+  .founder {
     bottom: -500px;
     height: 1000px;
     width: 94%;
   }
-  .about .container {
-    flex-direction: column;
+  .founder .container {
+    flex-direction: column-reverse;
     padding-left: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
   }
-  .about .character {
+  .founder .character {
     margin-right: 0;
   }
-  .about p {
+  .founder p {
     text-align:justify;
     text-justify:inter-ideograph;
     word-break: break-all;
@@ -273,44 +275,41 @@ import CardIngradients from './CardIngradients.vue'
   .md-none {
     display: block;
   }
-   /* .about {
-    bottom: -500px;
-    height: 1200px;
-  } */
 
-  .about .icon  {
+  .founder .icon  {
     width: 70px;
     height: 70px;
     /* margin-top: 5px; */
   }
-  .about p {
-    font-size: 22px;
-    line-height: 40px;
+  .founder p {
+    font-size: 20px;
+    line-height: 30px;
 
   }
 }
 @media (max-width: 377px) {
-.about .icon  {
+.founder .icon  {
     width: 55px;
     height: 55px;
     /* margin-top: 5px; */
     margin: 10px;
   }
-  .about p {
+  .founder p {
     font-size: 20px;
     line-height: 38px;
   }
 }
 
 @media (max-width: 340px) {
-  .about .icon  {
+  .founder .icon  {
     width: 45px;
     height: 45px;
   }
-  .about p {
+  .founder p {
     font-size: 20px;
     letter-spacing: 2px;
     line-height: 34px;
   }
 }
+
 </style>

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div id="section-01">
+  <header id="section-home">
     <div class="container">
 
       <div class="digital-agency">
@@ -10,11 +10,11 @@
         <h6>DIGITAL AGENCY</h6>
       </div>
 
-      <div class="hero-content">
-        <h1 class="logo">
+      <div class="hero-content" >
+        <h1 class="logo fadeInLeft wow" data-wow-duration="1s">
           <img src="../assets/logoW.png" alt="logo">
         </h1>
-        <h2 class="slogan">
+        <h2 class="slogan fadeInDown wow" data-wow-duration="2s" data-wow-delay="1s">
           WE CREATE<br/>
           AMAZING<br/>
           <span class="last-line">DIGITAL <br class="md-block"/>
@@ -24,7 +24,7 @@
 
       <div class="taste">
         <div class="pic">
-          <a href="#anchor">
+          <a href="#about">
             <img src="../assets/te.png" alt="taste">
           </a>
         </div>
@@ -34,13 +34,13 @@
 
     </div>
 
-  </div>
+  </header>
 </template>
 
 <style scoped>
 * { transition: 0.3s; }
 
-#section-01 {
+#section-home {
   width: 100%;
   height: 100%;
   /* height: 940px; */
@@ -176,13 +176,20 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-  transform: scale(1);
+  /* transform: scale(1); */
   transition: 0.5s;
-
+  animation: play-pulse 1.5s infinite;
+  animation-delay: 3s;
 }
-.taste:hover .pic {
+/* .taste:hover .pic {
   transform: scale(1.1);
+} */
+@keyframes play-pulse {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1) }
+  100% { transform: scale(0.9); }
 }
+
 .taste h6 {
   font-style: normal;
   font-weight: 700;

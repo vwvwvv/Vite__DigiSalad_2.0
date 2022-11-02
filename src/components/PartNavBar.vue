@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 // document.addEventListener("DOMContentLoaded", function(){
 //   const hamburger = document.querySelector('.hamburger')
@@ -14,11 +14,18 @@ import { onMounted, onUnmounted } from 'vue'
 onMounted(() => {
   const hamburger = document.querySelector('.hamburger')
   const overlays = document.querySelector('.overlays')
-
-  hamburger.addEventListener('click', function() {
+  const col = document.querySelectorAll('.col')
+  const toggle = function() {
     overlays.classList.toggle('open')
     hamburger.classList.toggle('open')
-  })
+  }
+  
+  hamburger.addEventListener('click',toggle)
+
+  for (let i = 0; i < col.length; i += 1) {
+    col[i].addEventListener('click',toggle)
+  }
+
 
   window.addEventListener('scroll', function() {
     const partNavbar = document.querySelector('#part-navbar')
@@ -30,14 +37,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="part-navbar">
+  <nav id="part-navbar">
     <h1 class="logo">
       <a href="#">
         <img src="../assets/logoO.png" alt="logo">
       </a>
     </h1>
     <div class="menu">
-      <button type="button">START YOUR PROJECT</button>
+      <button type="button" class="btn-start">START YOUR PROJECT</button>
       <div class="hamburger">
           <span class="hamburger-line"></span>
       </div>
@@ -61,19 +68,20 @@ onMounted(() => {
                     <h6>EMPOWERING BRANDS</h6>
                     <h1 class="heading">ABOUT US</h1>
                   </div>
-                  <a href="#"></a>
+                  <a href="#about"></a>
                 </div>
               </div>
+
               <div class="col works">
                 <div class="wrap">
                   <div class="pic">
-                  <img src="../assets/CardIngradients/ingradient_02.png" alt="about-us">
+                  <img src="../assets/CardIngradients/ingradient_02.png" alt="works">
                   </div>
                   <div class="text">
                     <h6>CASE STUDIES</h6>
                     <h1 class="heading">WORKS</h1>
                   </div>
-                  <a href="#"></a>
+                  <a href="#section-works"></a>
                 </div>
               </div>
             </div>
@@ -82,25 +90,25 @@ onMounted(() => {
               <div class="col careers">
                 <div class="wrap">
                   <div class="pic">
-                    <img src="../assets/CardIngradients/ingradient_03.png" alt="about-us">
+                    <img src="../assets/CardIngradients/ingradient_03.png" alt="awards">
                   </div>
                   <div class="text">
                     <h6>BE COOL WITH US</h6>
                     <h1 class="heading">CAREERS</h1>
                   </div>
-                  <a href="#"></a>
+                  <a href="#awards"></a>
                 </div>
               </div>
               <div class="col insights">
                 <div class="wrap">
                   <div class="pic">
-                    <img src="../assets/CardIngradients/ingradient_11.png" alt="about-us">
+                    <img src="../assets/CardIngradients/ingradient_11.png" alt="insights">
                   </div>
                   <div class="text">
                     <h6>OUR STRATEGIES</h6>
                     <h1 class="heading">INSIGHTS</h1>
                   </div>
-                  <a href="#"></a>
+                  <a href="#insights"></a>
                 </div>
               </div>
             </div>
@@ -118,20 +126,20 @@ onMounted(() => {
               <div class="col services">
                 <div class="wrap">
                   <div class="pic">
-                  <img src="../assets/CardIngradients/ingradient_10.png" alt="about-us">
+                  <img src="../assets/CardIngradients/ingradient_10.png" alt="services">
                   </div>
                   <div class="text">
                     <h6>AREAS OF EXPERTISE</h6>
                     <h1 class="heading">SERVICES</h1>
                   </div>
-                  <a href="#"></a>
+                  <a href="#service"></a>
                 </div>
               </div>
             </div>
 
         </div>
       </div>
-  </div>
+  </nav>
 </template>
 
 <style scoped>
@@ -179,7 +187,7 @@ onMounted(() => {
   align-items: center;
 }
 
-#part-navbar button {
+#part-navbar .btn-start {
   width: 200px;
   height: 40px;
   border-radius: 24px;
@@ -198,13 +206,15 @@ onMounted(() => {
   text-shadow: 0 0 4px rgba(2, 139, 111, 0.2);
 }
 
-#part-navbar button:hover {
+#part-navbar .btn-start:hover {
     /* background:linear-gradient(45deg, #26D0A8 3.94%, #4EE5EA 94.73%); */
     background-position: right center;
     box-shadow: 0 0 5px rgba(8, 58, 46, 0.5);
-    text-decoration: none;
 }
-
+#part-navbar .btn-start:active {
+  transform: scale(0.7);
+  box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -236,15 +246,13 @@ onMounted(() => {
 
 @media (max-width: 768px) {
 
-  #part-navbar button {
+  #part-navbar .btn-start {
     width: 130px;
     height: 45px;
+    margin-left: 5%;
   }
-  .hamburger {
-    margin-left: 20px;
-  }
+  .hamburger { margin-left: 20px; }
 }
-
 
 
 
@@ -292,11 +300,24 @@ onMounted(() => {
 }
 
 
-/* ------------------------ */
-/* 滿版菜單 */
-/* ------------------------ */
+
+
+
+
+
+
+
+
+
+/**
+ * ----------------------------------------
+ * 滿版菜單
+ * ----------------------------------------
+ */
+
+
 .overlays {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -304,25 +325,27 @@ onMounted(() => {
   overflow: hidden;
   z-index: 1;
   /* background: linear-gradient(180deg, #585880 3.61%, #26C6D0 95.7%); */
-  /* background: linear-gradient(180deg, rgba(88, 88, 128, 0.6) 3.61%, rgba(38, 198, 208, 0.9) 95.7%); */
+  /* background: linear-gradient(180deg, rgba(88, 88, 128, 0.6) 3.61%, rgba(38, 198, 208, 1) 95.7%); */
   background: linear-gradient(180deg, rgba(88, 88, 128, 0.5) 3.61%, rgba(38, 198, 208, 0.5) 95.7%), url(@/assets/BG.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
   transition: opacity 0.5s;
+  overscroll-behavior-y: contain;
 }
 .overlays.open {
-  height: 300vh;
+  min-height: 100vh;
   overflow-y: hidden;
   opacity: 1;
+  overscroll-behavior-y: contain;
 }
 
 .logo2 {
   position: absolute;
-  height: 55px;
+  height: 54px;
   opacity: 1;
-  padding-left: 60px;
+  padding-left: 5%;
   top: 22px;
 }
 .overlays .container {
@@ -605,10 +628,8 @@ h6 {
   }
 }
 
-@media (max-width: 768px) {
-  .heading {
-    font-size: 25px;
-  }
+@media (max-width: 992px) {
+
   .overlays .container {
     flex-direction: column;
     height: 90vh;
@@ -622,43 +643,216 @@ h6 {
     height: 30%;
     margin: 0;
     padding: 0;
-    justify-content: flex-start;
   }
 
-   .col:first-child,
-   .col:last-child {
-    width: 100%;
+
+  .col:first-child,
+  .col:last-child {
+    width: 80%;
     padding: 0;
     margin: 8px;
     height: 100%;
-   } 
+  } 
 
    .row:nth-child(2) .col {
-      width: 100%;
+      width: 80%;
       padding: 0;
    }
 
+
+
+
+
+
+
   .wrap,
-   .works .wrap,
+  .works .wrap,
   .careers .wrap,
   .insights .wrap,
   .services .wrap {
     flex-direction: row;
     justify-content:flex-start;
+    padding: 0;
     align-items: center;
+    margin-left: 25%;
+    /* margin-right: 25%; */
+    transition: 0.5s;
+  }
+
+
+  .heading {
+    font-size: 28px;
   }
 
   h6  {
     padding: 0;
   }
 
-  .pic {
-    width: 50px;
-    padding: 5px;
-  }
-
   .text {
     margin-left: 20px;
+  }
+
+  .pic,
+  .services .pic,
+  .insights .pic,
+  .careers .pic
+  {
+    /* max-width: 60px; */
+    height: 50px;
+    padding: 0;
+    width: 30%;
+    max-width: 55px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap,
+  .works .wrap,
+  .careers .wrap,
+  .insights .wrap,
+  .services .wrap {
+    flex-direction: row;
+    justify-content:flex-start;
+    padding: 0;
+    align-items: center;
+    margin-left: 15%;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .col:first-child,
+  .col:last-child {
+    width: 95%;
+  } 
+
+   .row:nth-child(2) .col {
+      width: 95%;
+   }
+
+   .wrap,
+   .works .wrap,
+  .careers .wrap,
+  .insights .wrap,
+  .services .wrap  {
+    padding: 0;
+    margin: 0 10%;
+  }
+
+  .heading {
+    font-size: 34px;
+  }
+  .heading:after {
+    bottom: 5px;
+    right: -20px;
+  }
+
+  h6 {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .pic,
+  .services .pic,
+  .insights .pic,
+  .careers .pic
+  {
+    /* max-width: 60px; */
+    height: 50px;
+    padding: 0;
+    width: 15%;
+    max-width: 55px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+}
+
+@media (max-width: 376px) {
+   .wrap,
+   .works .wrap,
+  .careers .wrap,
+  .insights .wrap,
+  .services .wrap  {
+    padding: 0;
+    margin: 0 10%;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+  .heading:after {
+    bottom: 10px;
+    right: -15px;
+  }
+
+  h6 {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .pic,
+  .services .pic,
+  .insights .pic,
+  .careers .pic
+  {
+    /* max-width: 60px; */
+    height: 50px;
+    padding: 0;
+    width: 20%;
+    max-width: 30px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+}
+@media (max-width: 346px) {
+   .wrap,
+   .works .wrap,
+  .careers .wrap,
+  .insights .wrap,
+  .services .wrap  {
+    padding: 0;
+    margin: 0 10%;
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-top: -200px;
+  }
+  .heading:after {
+    bottom: 10px;
+    right: -15px;
+  }
+
+  h6 {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .pic,
+  .services .pic,
+  .insights .pic,
+  .careers .pic
+  {
+    /* max-width: 60px; */
+    height: 50px;
+    padding: 0;
+    width: 20%;
+    max-width: 20px;
+  }
+
+  img {
+    object-fit: contain;
   }
 
 }
