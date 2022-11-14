@@ -2,79 +2,97 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
+
+  // =============================================
+  // add event on multiple elements
+  // =============================================
   const addEventOnElements = function (elem, type, callback) {
     for (let i = 0; i < elem.length; i++) {
       elem[i].addEventListener(type, callback);
     }
   }
-  
-  const loadingElement = document.querySelector('data-loading-container')
+
+
+  // =============================================
+  // Loading
+  // =============================================
+  // const loadingElement = document.querySelector('[data-loading-container]')
+  const loadingElement = document.querySelector('.loading-container')
 
   window.addEventListener('load', () => {
-    loadingElement.classList.add('loaded')
-    document.body.classList.add('loaded')
+    loadingElement.classList.add('js-loaded')
+    document.body.classList.add('js-loaded')
   })
 })
 
 </script>
 
 <template>
-  <div id="loading-container" data-loading-container>
-    <div class="loading-circle"></div>
-  </div>
+  <div id="loading">
+    <div class="loading-container" data-loading-container>
+      <div class="loading-circle"></div>
+    </div>
+</div>
 </template>
 
 <style scoped>
 
 body {
-  height: 300vh;
   overflow: hidden;
 }
-
-body.loading {
+body.js-loaded {
   overflow: visible;
 }
-body.active {
+body.js-active {
   overflow: hidden;
 }
 
-#loading-container {
+
+
+.loading-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgb(247, 247, 247);
+  background-color: #26C6D0;
 
   display: grid;
   place-items: center;
   transition: 0.5s;
-  z-index: 9999;
-
-  display: none;
+  z-index: 999999999999999;
+  /* display: none; */
 }
 
-#loading-container.loaded {
+.loading-circle {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-block-start-color: #EE6C8A;
+  border-radius: 50%;
+
+  animation-name: loading;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% { transform: rotate(0);}
+  100% { transform: rotate(1turn);}
+}
+
+/*
+ *---------------------------------------------------
+ *當網頁loading讀取資料結束後會隱藏loading圖案+次數變轉一次
+ *---------------------------------------------------
+ */
+.loading-container.js-loaded {
   opacity: 0;
   visibility: hidden;
 }
-
-.loading-circle {
-
-  width: 50px;
-  height: 50px;
-  border: 5px solid #EE6C8A;
-  border-block-start-color: #26C6D0;
-  border-radius: 50%;
-  animation: loading 0.5s linear infinite;
-}
-@keyframes loading {
-  0% { transform: rotate(0);}
-  100% { transform: rotate(360deg);}
-}
-
-#loading-cotainer.loaded,
-.loading-circle {
+.loading-container.js-loaded .loading-circle {
+  /* 動畫劇本重複次數 */
   animation-iteration-count: 1;
 }
 </style>

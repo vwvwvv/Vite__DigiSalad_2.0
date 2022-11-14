@@ -6,12 +6,13 @@ import SectionServiceFounder from '@/components/SectionServiceFounder.vue'
 import SectionBrands from '@/components/SectionBrands.vue'
 import SectionWorks from '@/components/SectionWorks.vue'
 import PartFooter from '@/components/PartFooter.vue'
-// import PartLoading from '@/components/PartLoading.vue'
+import PartLoading from '@/components/PartLoading.vue'
+import PartGototop from '@/components/PartGototop.vue'
 </script>
 
 <template>
 
-  <!-- <PartLoading></PartLoading> -->
+  <PartLoading></PartLoading>
   <PartNavBar></PartNavBar>
   <SectionHome></SectionHome>
   <SectionAboutAwards></SectionAboutAwards>
@@ -19,6 +20,8 @@ import PartFooter from '@/components/PartFooter.vue'
   <SectionBrands></SectionBrands>
   <SectionWorks></SectionWorks>
   <PartFooter></PartFooter>
+
+   <PartGototop></PartGototop>
 
   
 </template>
