@@ -18,6 +18,7 @@ onMounted(() => {
   const toggle = function() {
     overlays.classList.toggle('open')
     hamburger.classList.toggle('open')
+    document.body.classList.toggle('js-active')
   }
   
   hamburger.addEventListener('click',toggle)

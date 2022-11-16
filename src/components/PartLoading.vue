@@ -37,18 +37,6 @@ onMounted(() => {
 
 <style scoped>
 
-body {
-  overflow: hidden;
-}
-body.js-loaded {
-  overflow: visible;
-}
-body.js-active {
-  overflow: hidden;
-}
-
-
-
 .loading-container {
   position: fixed;
   top: 0;
